@@ -1,0 +1,19 @@
+#formcontainer{
+    background-color: aqua;
+    text-align: center;
+    margin: 170px;
+}
+
+
+label{
+    margin: 40px;
+}
+
+button{
+    margin: 30px;
+}
+
+input{
+    margin: 20px;
+}
+
