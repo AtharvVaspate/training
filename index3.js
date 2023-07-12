@@ -4,12 +4,23 @@ let parag = document.getElementById("paragraph");
 let head = document.getElementById("heading");
 let nextpage = document.getElementById("nextpage");
 
+let ikey = document.getElementById("inputkey");
 
+
+
+
+//events here onclcick mouseover keypressed 
+
+console.log("events here ((((((((((((((((((((()))))))))))))))))))))))))))))))))))")
 
 parag.addEventListener('mouseover' , function run(){
-    alert("mouse over para");
-    prompt("this iis prompt" , "this is default value");
-    alert("this is alert")
+    // alert("mouse over para");
+    // prompt("this iis prompt" , "this is default value");
+    // alert("this is alert")
+})
+
+ikey.addEventListener("keypress" , function key(){
+   alert("key pressed");
 })
 
 
@@ -17,8 +28,9 @@ parag.addEventListener('mouseover' , function run(){
 
 
 
-function hideshowpara(){
 
+function hideshowpara(){
+console.log("stops here with breakpoint")
 
 if(parag.style.display == "none"){
     parag.style.display = "block";
@@ -54,8 +66,17 @@ let passworderror = document.getElementById("showpassworderror");
 let name23 = document.getElementById("namehere");
 let name1 = document.getElementById("shownameerror");
 
+//1 , 2 , showradioerror
+let male = document.getElementById("1");
+let female = document.getElementById("2");
+let radioerror = document.getElementById("showradioerror");
+
+
 let passwordconfirm = document.getElementById("passwordconfirmhere")
 let confirmpassworderror = document.getElementById("showconfirmpassworderror");
+
+let numberhere1 = document.getElementById("numberhere");
+let numbererrorhere1 = document.getElementById("numbererrorhere");
 
 let flag = 1;
 console.log("name starts")
@@ -65,7 +86,8 @@ console.log("Name 2")
    
 
     if (name23.value == ""){
-        name1.innerHTML = "Please enter email";
+         name1.innerHTML = "Please enter email";
+        //throw new Error("please enter valid email thrown with custom error");
         console.log("here 2")
         flag = 1;
 
@@ -79,6 +101,19 @@ console.log("Name 2")
         name1.innerHTML = ""
         flag = 0;
     }
+
+
+    if (male.checked || female.checked){
+        radioerror.innerHTML = "";
+        flag = 0;
+    
+
+    }
+   
+   else{
+      flag = 1;
+      radioerror.innerHTML = "check at least one"
+   }
 
 
 
@@ -107,10 +142,29 @@ console.log("Name 2")
         console.log("aaaaaaaaaaaaaaasccaswaeeqesaaaaaaaa22222222222222")
         flag = 1;
         
+    }else if(password.value.length <3){
+        passworderror.innerHTML = "enter longer password"
+        flag = 1;
     }
  
     else{
         passworderror.innerHTML = ""
+        flag = 0;
+    }
+
+    if (numberhere1.value == ""){
+        numbererrorhere1.innerHTML = "Please enter contact number";
+        console.log("here 2")
+        flag = 1;
+
+       
+    }
+    else if(numberhere1.value.length <11){
+        numbererrorhere1.innerHTML = "enter correct contact number"
+        flag = 1;
+    }
+    else{
+        numbererrorhere1.innerHTML = ""
         flag = 0;
     }
 
@@ -135,6 +189,8 @@ console.log("Name 2")
         confirmpassworderror.innerHTML = ""
         flag = 0;
     }
+
+    
 
 
 
@@ -194,13 +250,28 @@ console.log("check id displayed")
 
 
     console.log(result1);
-
+console.log("erros here 666666666666666666666666666666666666666666666666")
   
         try{
-                 console.log(atharv)
+                // if(console.log(atharv)){
+                //     throw new CustomError("please enter valid email thrown with custom error");
+                // }
+
+                let age = prompt("enter age");
+
+                if(age>150){
+                    throw new Error("not true");
+                }
+
+                
+              
         }
         catch(error){
-console.log("name not present" + error);
+            console.log(error.name);
+            console.log(error.message);
+          
+         
+
         }
         finally{
 console.log("Last step");
@@ -259,24 +330,10 @@ atharv1.submit();
 
 
 
-//custom error
-
-try{
-    let age1 = 99;
-    if(age1<150){
-        throw new ReferenceError("this is reference error");
-    }
-
-
-}catch(error){
-    console.log(error.message);
-    console.log(error.stack);
-    console.log(error.name);
-}
 
 ////////////////////////////////////////////////
-//custom error
-
+//custom error          //ask this
+console.log("custom error class 5555555555555555555555555555555555555555555555555555555" )
 class check1 extends Error {
     constructor(msg) {
         super(msg);

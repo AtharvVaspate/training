@@ -15,6 +15,10 @@ console.log(name1);
 console.log(name2);
 console.log(c);
 
+
+
+
+
 //unary binary 
 let d = 5;
 d = -d;
@@ -49,7 +53,7 @@ const userinfo = {
 for(let i = 0;i<use;i++){
     console.log(i);
 }
-
+debugger;
 /////////////////////////////////////////
 if(use<10){
     console.log("less than")
@@ -175,8 +179,13 @@ deleteelement.remove();
 
 
 //////////////////////////////////////////
-//callback
 
+
+
+
+//next part starts here
+//callback
+console.log("next starts here 12 july ''''''''''''''''''''''''''''''''''''");
 console.log("first");
 setTimeout(() => {
     for(let i = 0 ;i<7;i++){
@@ -263,7 +272,7 @@ function second2(){
 
 first1().then((message)=>{
     console.log("first completed" , message);
-    return second2();
+    return second2(message);
 }).then((message)=>{
     console.log("second completed" , message);
 }).catch((message)=>{
@@ -301,3 +310,33 @@ function checkasyncawaitfunc() {
   /////////////////////////////////////////////////////////////
 
 
+
+
+  let age1 = new Promise(function(resolve , rejet){
+
+   let ageval =   prompt("enter promise value");
+if(ageval>100){
+  resolve("ok")
+}
+else{
+  rejet("problem")
+}
+
+
+
+  })
+
+  age1.then((message )=> {
+    console.log(message + "e23131313131" );
+  
+  }).catch((message) => {
+    console.log(message + "dsfaeqweqeq1313131");
+
+  }).finally(() => {
+    console.log("finally age done 21313131313");
+
+  })
+
+
+
+  

@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
     <link href="index3.css" rel="stylesheet">
+
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+
+        #numberhere{
+            input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+
+        }
+
+}
+
+    </style>
 </head>
 <body>
     <p id="paragraph">
@@ -29,6 +46,8 @@
         next page
     </button>
 
+    <input type="text" id="inputkey"  >
+
     <hr>
     <div id="formcontainer">
         <h1>Login</h1>
@@ -49,6 +68,24 @@
             <input type="password" id="passwordconfirmhere" placeholder="password"><br>
             <p id="showconfirmpassworderror"></p>
              <br>
+
+             <label>Enter mobile number</label><br>
+             <input type="number" id="numberhere" placeholder="contactnumber" maxlength="10"><br>
+             <p id="numbererrorhere"></p>
+              <br>
+
+              <input type="radio" id="1" value="1" name="radiogrp" >
+              <label for="male">Male</label>
+
+              <input type="radio" id="2"  name="radiogrp" value="2" >
+              <label for="2">Female</label> 
+
+              <p id="showradioerror"></p>
+
+
+
+
+              <br>
 
 
             <button type="submit" id="subbutton" >Submit</button>

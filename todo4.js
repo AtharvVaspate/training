@@ -546,6 +546,8 @@ function display(){
 
 
 
+console.log("start from here <<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+
 let user = {
     name8 : "atharv" , 
     display : function display(){
@@ -575,3 +577,23 @@ var studentList = {
 
 
   studentList.showList();
+
+
+  
+
+
+
+  var studentList1 = {
+    title: 'BE Computer',
+    students: ["Atharv", "Utkarsh"],
+    showlistfunc: function() {
+        this.students1 = ["rahul", "rohit"]; // corrected assignment syntax
+        this.title1 = "be comp 22"; // corrected assignment syntax
+        this.students1.forEach((student) => {
+            console.log("here inside arrow function " + this.title1 + ': ' + student); // corrected variable name
+        });
+    }
+};
+
+  console.log(studentList1.showlistfunc());
+
