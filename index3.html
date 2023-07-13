@@ -9,6 +9,11 @@
     <style>
         /* Chrome, Safari, Edge, Opera */
 
+        #vehicle{
+            height: 50px;
+            width: 50px;
+        }
+
         #numberhere{
             input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -51,7 +56,7 @@ input[type=number]::-webkit-outer-spin-button {
     <hr>
     <div id="formcontainer">
         <h1>Login</h1>
-        <form action="" onsubmit="return check()">
+        <form action="" onsubmit="return check()" >
             <label >Name</label><br>
             <input type="text" placeholder="name" id="namehere">
             <p id="shownameerror"></p>
@@ -85,6 +90,18 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 
+              <br>
+
+              <select id="vehicle" onchange="changevehicle() ">
+                <option >car</option>
+                <option>bus</option>
+                <option>train</option>
+              </select>
+              <br>
+
+<p id="carshow">
+
+</p>
               <br>
 
 

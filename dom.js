@@ -53,7 +53,7 @@ const userinfo = {
 for(let i = 0;i<use;i++){
     console.log(i);
 }
-debugger;
+//debugger;
 /////////////////////////////////////////
 if(use<10){
     console.log("less than")
@@ -246,6 +246,7 @@ console.log("for positive result" , message)
 
 
 ///////////////////////////////////////////////// promis 2
+console.log("check here for promise *************)e7711************************************")
 
 function first1(){
     return new Promise((resolve , reject)=>{
@@ -270,11 +271,25 @@ function second2(){
 
 }
 
+function thired3(){
+  return new Promise((resolve , reject)=>{
+                setTimeout(() => {
+                let w = 1000;
+                w = w+100;
+                  resolve("inside resolve 1100")
+                }, 3000);
+
+  })
+
+}
+
 first1().then((message)=>{
     console.log("first completed" , message);
     return second2(message);
 }).then((message)=>{
     console.log("second completed" , message);
+    return thired3(message);
+
 }).catch((message)=>{
   console.log("error occured in first second" , message)
 }).finally(()=>{
@@ -288,17 +303,17 @@ first1().then((message)=>{
 function checkasyncawaitfunc() {
     return new Promise((resolve , reject)  => {
       setTimeout(() => {
-        resolve('resolved');
+        resolve('resolved' + "this message isnide");
       }, 2000);
     });
   }
   
   async function asyncCall() {
     try{
-    console.log('calling');
+    console.log('calling' + "before ))))))))))))))))))))))))00000000000000000000000000000");
     const result = await checkasyncawaitfunc();
     console.log(result);
-    console.log("checking")
+    console.log("checking" + "check here \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
     }
     catch{
         console.log("error occured in async await here")

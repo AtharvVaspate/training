@@ -568,7 +568,7 @@ var studentList = {
     students: ["Atharv", "Utkarsh"],
     showList() {
         this.students.forEach((student) => {
-            console.log("here inside arrow function " + this.title + ': ' + student);
+            console.log("here inside arrow function ************************************* " + this.title + ': ' + student);
         })
     //   console.log('title', this.title)
     //   console.log('students', this.students)
@@ -590,7 +590,7 @@ var studentList = {
         this.students1 = ["rahul", "rohit"]; // corrected assignment syntax
         this.title1 = "be comp 22"; // corrected assignment syntax
         this.students1.forEach((student) => {
-            console.log("here inside arrow function " + this.title1 + ': ' + student); // corrected variable name
+            console.log("here inside arrow function  )))))))))))))))))))))))))" + this.title1 + ': ' + student); // corrected variable name
         });
     }
 };

@@ -78,6 +78,21 @@ let confirmpassworderror = document.getElementById("showconfirmpassworderror");
 let numberhere1 = document.getElementById("numberhere");
 let numbererrorhere1 = document.getElementById("numbererrorhere");
 
+
+
+//vehicle carshow
+
+let vehicledisplay = document.getElementById("vehicle");
+let carshow1 = document.getElementById("carshow");
+
+function changevehicle(){
+    let vehiclevalue = vehicledisplay.value;
+
+carshow1.innerHTML = "you selected" + " " + vehiclevalue;
+}
+
+
+
 let flag = 1;
 console.log("name starts")
 function check(){
@@ -415,3 +430,22 @@ console.log(abcde);
 abcde[1] = "Y";
 
 console.log(abcde);
+
+
+
+
+let aa = 99;
+
+
+try{
+
+
+if(aa<100){
+    throw new Error("smaller value")
+}
+
+}catch(error){
+    error.message;
+    error.value;
+    error.stack;
+}
